@@ -102,45 +102,69 @@ import './App.css';
 // }
 
 
-import ClsPropsStates from './components/clsPropsStates';
-import FnPropsStates from './components/fnPropsStates';
+// import ClsPropsStates from './components/clsPropsStates';
+// import FnPropsStates from './components/fnPropsStates';
+
+// function App() {
+
+//   const [login, setLogin] = useState(false);
+
+//   let data = {
+//     "name": "Dinesh",
+//     "id": 1,
+//     "age": "30",
+//     "active": true,
+//   }
+
+//   return (
+//     <>
+//       {/* <ClsPropsStates name="Dinesh" id={1000} age="30" active={true} /> */}
+
+//       {/* <ClsPropsStates dinesh={data} />
+
+//       <FnPropsStates dinesh={data} /> */}
+
+//       <p>Login Status: {login.toString()}</p>
+
+//       {
+//         login
+//           ?
+//           <>
+//             <p><button onClick={() => setLogin(false)}>Logout</button></p>
+//             <ClsPropsStates dinesh={data} />
+//           </>
+//           :
+//           <>
+//             <p><button onClick={() => setLogin(true)}>Login</button></p>
+//           </>
+//       }
+
+      
+      
+//     </>
+//   )
+// }
+
+import ClsLifeCycle from './components/clsLifeCycle';
+
+import ClsAPI from './components/clsAPI';
 
 function App() {
-
   const [login, setLogin] = useState(false);
-
-  let data = {
-    "name": "Dinesh",
-    "id": 1,
-    "age": "30",
-    "active": true,
-  }
 
   return (
     <>
-      {/* <ClsPropsStates name="Dinesh" id={1000} age="30" active={true} /> */}
-
-      {/* <ClsPropsStates dinesh={data} />
-
-      <FnPropsStates dinesh={data} /> */}
-
-      <p>Login Status: {login.toString()}</p>
-
-      {
-        login
+      {/* {
+        login 
           ?
-          <>
-            <p><button onClick={() => setLogin(false)}>Logout</button></p>
-            <ClsPropsStates dinesh={data} />
-          </>
+          <button onClick={() => setLogin(false)}>Logout</button>
           :
-          <>
-            <p><button onClick={() => setLogin(true)}>Login</button></p>
-          </>
+          <button onClick={() => setLogin(true)}>Login</button>
       }
+      <br />
+      <ClsLifeCycle login={login} /> */}
 
-      
-      
+      <ClsAPI />
     </>
   )
 }

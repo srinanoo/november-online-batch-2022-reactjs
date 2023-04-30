@@ -145,9 +145,11 @@ import './App.css';
 //   )
 // }
 
-import ClsLifeCycle from './components/clsLifeCycle';
+// import ClsLifeCycle from './components/clsLifeCycle';
+// import ClsAPI from './components/clsAPI';
 
-import ClsAPI from './components/clsAPI';
+// import FnHooks from './components/fnHooks';
+import FnAPI from './components/fnAPI';
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -164,7 +166,11 @@ function App() {
       <br />
       <ClsLifeCycle login={login} /> */}
 
-      <ClsAPI />
+      {/* <ClsAPI /> */}
+
+      {/* <FnHooks /> */}
+
+      <FnAPI />
     </>
   )
 }

@@ -1,7 +1,7 @@
 // import React from 'react';
 
 // import logo from './logo.svg';
-import { useState } from 'react';
+import { createContext, useState } from 'react';
 import './App.css';
 
 // import ClsHeader from './components/clsHeader';
@@ -149,30 +149,66 @@ import './App.css';
 // import ClsAPI from './components/clsAPI';
 
 // import FnHooks from './components/fnHooks';
-import FnAPI from './components/fnAPI';
+// import FnAPI from './components/fnAPI';
+
+// function App() {
+//   const [login, setLogin] = useState(false);
+
+//   return (
+//     <>
+//       {/* {
+//         login 
+//           ?
+//           <button onClick={() => setLogin(false)}>Logout</button>
+//           :
+//           <button onClick={() => setLogin(true)}>Login</button>
+//       }
+//       <br />
+//       <ClsLifeCycle login={login} /> */}
+
+//       {/* <ClsAPI /> */}
+
+//       {/* <FnHooks /> */}
+
+//       <FnAPI />
+//     </>
+//   )
+// }
+
+// import ChildComp1 from './components/childComp1';
+// import ChildComp2 from './components/childComp2';
+// import ChildComp3 from './components/childComp3';
+
+import FnForms from './components/fnForms';
+
+// let loginContext = createContext();
 
 function App() {
-  const [login, setLogin] = useState(false);
-
+  // const [login, setLogin] = useState(false);
   return (
     <>
-      {/* {
+      {/* <p>Login: {login.toString()}</p>
+      {
         login 
-          ?
+          ? 
           <button onClick={() => setLogin(false)}>Logout</button>
           :
           <button onClick={() => setLogin(true)}>Login</button>
-      }
-      <br />
-      <ClsLifeCycle login={login} /> */}
+      } */}
+      {/* <ChildComp1 logged={login} />
+      <ChildComp2 logged={login} />
+      <ChildComp3 logged={login} /> */}
 
-      {/* <ClsAPI /> */}
+      {/* <loginContext.Provider value={login}>
+        <ChildComp1 />
+        <ChildComp2 />
+        <ChildComp3 />
+      </loginContext.Provider> */}
 
-      {/* <FnHooks /> */}
-
-      <FnAPI />
+      <FnForms />
     </>
   )
 }
 
 export default App;
+// export { loginContext };

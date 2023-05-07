@@ -2,7 +2,13 @@
 
 // import logo from './logo.svg';
 import { createContext, useState } from 'react';
+import { BrowserRouter, HashRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import LayoutPage from './pages/Layout';
+import HomePage from './pages/Home';
+import AboutPage from './pages/About';
+import ContactPage from './pages/Contact';
+import BlogPage from './pages/Blog';
 
 // import ClsHeader from './components/clsHeader';
 // import ClsMain from './components/clsMain';
@@ -179,33 +185,50 @@ import './App.css';
 // import ChildComp2 from './components/childComp2';
 // import ChildComp3 from './components/childComp3';
 
-import FnForms from './components/fnForms';
+// import FnForms from './components/fnForms';
 
-// let loginContext = createContext();
+// // let loginContext = createContext();
+
+// function App() {
+//   // const [login, setLogin] = useState(false);
+//   return (
+//     <>
+//       {/* <p>Login: {login.toString()}</p>
+//       {
+//         login 
+//           ? 
+//           <button onClick={() => setLogin(false)}>Logout</button>
+//           :
+//           <button onClick={() => setLogin(true)}>Login</button>
+//       } */}
+//       {/* <ChildComp1 logged={login} />
+//       <ChildComp2 logged={login} />
+//       <ChildComp3 logged={login} /> */}
+
+//       {/* <loginContext.Provider value={login}>
+//         <ChildComp1 />
+//         <ChildComp2 />
+//         <ChildComp3 />
+//       </loginContext.Provider> */}
+
+//       <FnForms />
+//     </>
+//   )
+// }
 
 function App() {
-  // const [login, setLogin] = useState(false);
   return (
     <>
-      {/* <p>Login: {login.toString()}</p>
-      {
-        login 
-          ? 
-          <button onClick={() => setLogin(false)}>Logout</button>
-          :
-          <button onClick={() => setLogin(true)}>Login</button>
-      } */}
-      {/* <ChildComp1 logged={login} />
-      <ChildComp2 logged={login} />
-      <ChildComp3 logged={login} /> */}
-
-      {/* <loginContext.Provider value={login}>
-        <ChildComp1 />
-        <ChildComp2 />
-        <ChildComp3 />
-      </loginContext.Provider> */}
-
-      <FnForms />
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<LayoutPage />}>
+            <Route index element={<HomePage />} />
+            <Route exact path='/about' element={<AboutPage />} />
+            <Route exact path='/contact' element={<ContactPage />} />
+            <Route exact path='/blog' element={<BlogPage />} />
+          </Route>
+        </Routes>
+      </HashRouter>
     </>
   )
 }
